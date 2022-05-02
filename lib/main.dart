@@ -3,6 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:zoom_clone/screens/auth/login_screen.dart';
 import 'package:zoom_clone/utils/colors.dart';
 
+import 'controllers/auth_controller.dart';
+import 'screens/home_screen.dart';
+
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
@@ -20,7 +23,20 @@ class MyApp extends StatelessWidget {
       title: 'Zoom Clone',
       theme:
           ThemeData.dark().copyWith(scaffoldBackgroundColor: backgroundColor),
-      home: LoginScreen(),
+      home: StreamBuilder(
+        stream: AuthController().authChanges,
+        builder: (context, snapshot) {
+          if (snapshot.connectionState == ConnectionState.waiting) {
+            return Center(child: CircularProgressIndicator());
+          }
+
+          if (snapshot.hasData) {
+            return HomeScreen();
+          }
+
+          return LoginScreen();
+        },
+      ),
     );
   }
 }
