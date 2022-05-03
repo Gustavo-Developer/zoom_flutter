@@ -1,8 +1,31 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
+import 'package:zoom_clone/controllers/jitsi_controller.dart';
+import 'package:zoom_clone/screens/video_call_screen.dart';
 
 import 'widget/reuseable_icon.dart';
 
-class MeetingScreen extends StatelessWidget {
+class MeetingScreen extends StatefulWidget {
+  @override
+  State<MeetingScreen> createState() => _MeetingScreenState();
+}
+
+class _MeetingScreenState extends State<MeetingScreen> {
+  final JitsiController _jitsiController = JitsiController();
+
+  createNewMeeting() {
+    var random = Random();
+    String roomName = (random.nextInt(10000000) + 10000000).toString();
+    _jitsiController.createMeeting(
+        roomName: roomName, isAudioMuted: true, isVideoMuted: true);
+  }
+
+  joinMeeting() {
+    Navigator.of(context)
+        .push(MaterialPageRoute(builder: (context) => VideoCallScreen()));
+  }
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -10,15 +33,11 @@ class MeetingScreen extends StatelessWidget {
       children: [
         Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
           ReuseableIcon(
-              onPressed: () {
-                print('New Meeting');
-              },
+              onPressed: createNewMeeting,
               icon: Icons.videocam,
               text: 'New Meeting'),
           ReuseableIcon(
-              onPressed: () {
-                print('Join Meeting');
-              },
+              onPressed: joinMeeting,
               icon: Icons.add_box,
               text: 'Join Meeting'),
           ReuseableIcon(
