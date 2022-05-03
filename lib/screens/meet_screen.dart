@@ -12,7 +12,7 @@ class MeetingScreen extends StatefulWidget {
 }
 
 class _MeetingScreenState extends State<MeetingScreen> {
-  final JitsiController _jitsiController = JitsiController();
+  final JitsiMeetMethods _jitsiController = JitsiMeetMethods();
 
   createNewMeeting() {
     var random = Random();
