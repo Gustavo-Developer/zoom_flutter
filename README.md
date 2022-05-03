@@ -1,16 +1,50 @@
-# zoom_clone
+<h1 align="center">
 
-A new Flutter project.
+</h1>
 
-## Getting Started
+<p align="center">
+  Zoom - A meeting app🚀
+  <br>
+  <br>
 
-This project is a starting point for a Flutter application.
+  <img alt="Language count" src="https://img.shields.io/github/repo-size/gustavo-developer/zoom_flutter"/>
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+  <a href="https://github.com/gustavo-developer/zoom_flutter/commits/main">
+    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/gustavo-developer/zoom_flutter">
+  </a>
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+  <img alt="License" src="https://img.shields.io/github/license/gustavo-developer/zoom_flutter">
+</p>
+
+
+## :dart: Sobre ##
+
+This project is a Clone of a Metting Zoom App
+
+
+
+## :white_check_mark: Requerimentos ##
+
+- [Flutter]
+- [Android Studio]
+
+## :checkered_flag: Começando ##
+
+```bash
+# Clone this project
+$ git clone https://github.com/Gustavo-Developer/ignews
+
+# Access
+$ cd zoom_flutter
+
+# Install dependencies
+$ flutter pubget
+
+
+```
+## :framed_picture: Imagens ##
+
+<h1 align="center">
+    <img alt = "Web app" src = "./.github/home.png" width = "100%" />
+</h1># igNews
