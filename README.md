@@ -33,7 +33,7 @@ This project is a Clone of a Metting Zoom App
 
 ```bash
 # Clone this project
-$ git clone https://github.com/Gustavo-Developer/ignews
+$ git clone https://github.com/Gustavo-Developer/zoom_flutter
 
 # Access
 $ cd zoom_flutter
@@ -47,4 +47,4 @@ $ flutter pub get
 
 <h1 align="center">
     <img alt = "Web app" src = "./.github/home.png" width = "100%" />
-</h1># igNews
+</h1># Zoom Clone
