@@ -11,7 +11,7 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   int pageIndex = 0;
 
-  final pages = [MeetScreen(), HistoryScreen()];
+  final pages = [MeetingScreen(), HistoryScreen()];
 
   @override
   Widget build(BuildContext context) {
@@ -19,6 +19,10 @@ class _HomeScreenState extends State<HomeScreen> {
       appBar: AppBar(
         backgroundColor: backgroundColor,
         elevation: 0,
+        title: Text(
+          'Meet & Chat',
+        ),
+        centerTitle: true,
       ),
       bottomNavigationBar: BottomNavigationBar(
           onTap: (index) {

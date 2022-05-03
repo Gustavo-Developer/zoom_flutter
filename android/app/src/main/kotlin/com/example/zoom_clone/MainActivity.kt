@@ -1,4 +1,4 @@
-package com.example.zoom_clone
+package com.gustavodeveloper.zoom_clone
 
 import io.flutter.embedding.android.FlutterActivity
 
