@@ -39,7 +39,7 @@ $ git clone https://github.com/Gustavo-Developer/ignews
 $ cd zoom_flutter
 
 # Install dependencies
-$ flutter pubget
+$ flutter pub get
 
 
 ```
